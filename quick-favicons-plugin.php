@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Quick Favicon Plugin
-Description: Adding favicon into your wordpress site. This plugin is best used with https://www.favicon-generator.org/
+* Plugin Name: Quick Favicon Plugin
+* Version: 1.0
+* Author: Antti Pohjola
+* Description: Adding favicon into your wordpress site. This plugin is best used with
 */
-
 function add_my_favicon() {
     $favicon_path = plugins_url( '/favicons/', __FILE__ );    
 
-   // echo '<link rel="shortcut icon" href="' . $favicon_path . '" />';
-    echo '<link rel="apple-touch-icon" sizes="57x57" href="' . $favicon_path . 'apple-icon-57x57.png">';
+    echo '<link rel="apple-touch-icon" sizes="57x57" href="' . $favicon_path . 'apple-icon-57x57.png">´+´';
     echo '<link rel="apple-touch-icon" sizes="60x60" href="' . $favicon_path . 'apple-icon-60x60.png">';
     echo '<link rel="apple-touch-icon" sizes="72x72" href="' . $favicon_path . 'apple-icon-72x72.png">';
     echo '<link rel="apple-touch-icon" sizes="76x76" href="' . $favicon_path . 'apple-icon-76x76.png">';
@@ -23,9 +23,6 @@ function add_my_favicon() {
     echo '<link rel="icon" type="image/png" sizes="16x16" href="' . $favicon_path . 'favicon-16x16.png">';
     echo '<link rel="manifest" href="' . $favicon_path . 'manifest.json">';
 }
-
-
 add_action( 'wp_head', 'add_my_favicon' ); //front end
-add_action( 'admin_head', 'add_my_favicon' ); //admin end
+add_action( 'admin_head', 'add_my_favicon'); //admin end
 ?>
-
